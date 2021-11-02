@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="icon" href="./img/mortarboard-svgrepo-com.svg">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <title>Dwight School</title>
 </head>
 
@@ -47,7 +48,8 @@
                         vero repellat nobis
                         qui non in nostrum! Quisquam, officiis, dolorem officia nobis dicta deserunt magni omnis itaque
                         voluptas deleniti atque! </p>
-                    <button class="btn btn-primary btn-sm">Start Enrolment</button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#enroll">Start
+                        Enrolment</button>
                 </div>
                 <img src="./img/1549325432.svg" alt="" class="img-fluid w-25 d-none d-sm-block">
             </div>
@@ -71,6 +73,28 @@
         </div>
     </section>
     <!-- News section  -->
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam beatae, dolor amet ipsa nisi
+                    quam.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -255,7 +279,7 @@
     <section class="p-5 bg-info text-light">
         <div class="continer">
             <div class="text-center mb-5">
-                <h3>Our Instructour</h3>
+                <h3>Our Instructor</h3>
                 <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi earum ea a, atque
                     reprehenderit itaque.</p>
             </div>
@@ -333,15 +357,77 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
     </section>
     <!--Instructor section  -->
 
+    <!--Map section  -->
+    <div class="section p-5">
+        <div class="continer">
+            <div class="row g-4">
+                <h3 class="text-center mb-4">Contact Info</h3>
+                <div class="col-md">
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <p class="lead"><strong class="fw-bold">Lorem ipsum:</strong> dolor sit amet consectetur.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="lead"><strong class="fw-bold">Lorem ipsum:</strong> dolor sit amet consectetur.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="lead"><strong class="fw-bold">Lorem ipsum:</strong> dolor sit amet consectetur.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="lead"><strong class="fw-bold">Lorem ipsum:</strong> dolor sit amet consectetur.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="lead"><strong class="fw-bold">Lorem ipsum:</strong> dolor sit amet consectetur.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div id='map' style='width: 100%; height: 100%;'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Map section  -->
+    <!-- footer -->
+    <footer class="p-5 bg-dark text-white position-relative">
+        <div class="continer">
+            <p class="text-center lead">Copyright &copy; 2021 Mohamed Ahmed </p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+            <div class="text-center">
+                <a href="#"> <i class="bi bi-linkedin"></i></a>
+                <a href="#"> <i class="bi bi-facebook"></i></a>
+                <a href="#"> <i class="bi bi-instagram"></i></a>
+                <a href="#"> <i class="bi bi-github"></i></a>
+                <a href="#"> <i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
 
+
+    <!-- Script -->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken =
+            'pk.eyJ1IjoiYWJvaGFsZW1hOTgiLCJhIjoiY2t2aHI3eWh1NGJycTJubHVsa2JtbHR3cCJ9.vL_wJ-i3CXr8HIv2ug6aUA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+        });
+    </script>
 </body>
 
 </html>
